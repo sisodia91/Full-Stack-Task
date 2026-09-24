@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,h2
+{
+    color: blue;
+}        p{
+            font-size: 20px;
+        }
+        /*p:nth-child(n+4){
+            color:red
+        }*/
+        p:has(span){
+            color:red;
+        }
+        input:checked-label{
+            color:white;
+        }
+        .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+
+.container > div {
+    background-color: black;
+    color: white;
+}
+#box1{
+    background-color: green;
+    flex-grow: 2;
+}
+#box2{
+    background-color: black;
+    flex-grow: 2;
+}
+#box3{
+    background-color: red;
+    flex-grow: 2;
+
+}
+#box4{
+    background-color: yellow;
+    flex: 2 0 150px;
+
+}
+#box5{
+    background-color: orange;
+    flex:1 0 150px;
+}
+#box6{
+    background-color: red;
+    flex:w 1 0 150px
+}
+    </style>
+</head>
+<body>
+    <h1>Heading H1</h1>
+    <h2>Heading H2</h2>
+
+    <input type="checkbox" id="toggle">
+
+    <p>Para 1</p>
+    <p>Para 2</p>
+    <p>Para 3</p>
+    <p>Para 4</p>
+    <p>Para
+        <span>5 </span>
+    </p>
+    <p>Para 6</p>
+    <p>Para 7</p>
+    <p>Para 8</p>
+
+    <div class="container">
+    <div id="box1">1</div>
+    <div id="box2">2</div>
+    <div id="box3">3</div>
+    <div id="box4">4</div>
+    <div id="box5">5</div>
+    <div id="box6">6</div>
+</div>
+    
+
+    
+</body>
+</html>

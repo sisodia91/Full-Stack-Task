@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+body {
+    margin: 30px;
+}
+
+.image {
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar {
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+
+    width: calc(100% - 80px);
+    height: 78px;
+
+    margin: 20px auto 0;
+
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(15, 16, 18, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    min-width: 180px;
+}
+
+.bmw-mark {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid white;
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    background:
+        conic-gradient(
+            #1683ff 0deg 90deg,
+            white 90deg 180deg,
+            #1683ff 180deg 270deg,
+            white 270deg
+        );
+
+    box-shadow: 0 0 12px rgba(255,255,255,0.15);
+}
+
+.brand-name {
+    color: white;
+
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #bdbdbd;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 29px 0;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.nav-links a:hover {
+    color: white;
+    transform: translateY(-1px);
+}
+
+
+/* Active underline */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 18px;
+
+    width: 0;
+    height: 2px;
+
+    background: #1683ff;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: white;
+}
+
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.explore-btn {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 12px 20px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 12px;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.explore-btn span {
+    font-size: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: rgba(255,255,255,0.08);
+
+    border-color: white;
+
+    transform: translateY(-2px);
+}
+
+.explore-btn:hover span {
+    transform: translateX(5px);
+}
+
+
+@media (max-width: 900px) {
+
+    .navbar {
+        width: calc(100% - 30px);
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .explore-btn {
+        display: none;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 65px;
+    }
+
+    .nav-logo {
+        min-width: auto;
+    }
+
+    .brand-name {
+        display: none;
+    }
+
+    .bmw-mark {
+        width: 38px;
+        height: 38px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 70px;
+    }
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+<nav class="navbar">
+
+    <div class="nav-logo">
+        <span class="bmw-mark">BMW</span>
+        <span class="brand-name">BMW</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Models</a>
+        <a href="#">Services</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <a href="#" class="explore-btn">
+        Explore More
+        <span>→</span>
+    </a>
+
+</nav>
+
+
+<div class="container">
+
+    <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFxd6LfbR22vbt7jy1tWc3m4etU4LUg5gURA4jMHknOA&s=10">
+    </div>
+
+
+    <div class="image">
+        <img src="https://www.bmw-evmautokraft.in/sites/default/files/2023-01/500x542_0.jpg">
+    </div>
+
+    <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5aR8NnMm3GmkxqUM0kFwCeS591THs5QlMf3WkYU_IXQ&s=10">
+    </div>
+
+    <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIHakAIAE5WzrP1rRskupRhhs-dfwILMoAb8UP9JQ3Lg&s=10">
+    </div>
+
+    <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXrXKNKBCfC8d_-Ye2oHZ_Sg2nLhzYCfdpkCc1z0Vkkg&s=10">
+    </div>
+
+    <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7bdDridYL3rbwjAxjKIYCglNB83-cTe1neShCKoxEsaKV66xtfsZvsCM&s=10">
+    </div>
+
+</div>
+
+</body>
+</html>

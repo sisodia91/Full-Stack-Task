@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      width: 100vw;
+      background:linear-gradient(
+    180deg,
+    
+    rgb(0, 238, 255),
+    black
+      );
+    }
+    .container{
+      height:97vh;
+      display: grid;
+      grid-template-columns:repeat(auto-fit) ;
+      grid-template-rows: 100px 100px 100px;
+      gap: 3%;
+
+    }
+    .container>div{
+      outline: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+
+
+    </div>
+
+    <input
+  type="text"
+  value="tbone"
+  disabled
+  class="invalid:border-pink-500 invalid:text-pink-600 focus:border-sky-500 focus:outline focus:outline-sky-500 focus:invalid:border-pink-500 focus:invalid:outline-pink-500 disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-500 disabled:shadow-none dark:disabled:border-gray-700 dark:disabled:bg-gray-800/20 ..."
+/>
+    
+</body>
+</html>
